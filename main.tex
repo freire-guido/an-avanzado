@@ -6,16 +6,39 @@
 \maketitle
 
 \chapter{Primer Parcial}
+\section{Practica 1}
+\beginc{ejercicio}{16}
+    \enum{
+        \item Si $\lim\limits_{k\to\infty} x_{2k} = \lim\limits_{k\to\infty}  x_{2k+1}$ entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
+        \item Si $(x_{2k})_{k\in\mathbb{N}}$, $(x_{2k+1})_{k\in\mathbb{N}}$ y $(x_{3k})_{k\in\mathbb{N}}$ son convergentes entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
+    }
+\end{ejercicio}
+\begin{solucion}
+    \enum{
+        \item Existen $k_{2k}$, $k_{2k+1}$ que garantizan $\forall \epsilon > 0$ que $|x_{2k} - c| < \epsilon$, $|x_{2k+1} - c| < \epsilon$
+            \[ |x_{2k} + x_{2k+1}| \leq |x_{2k} + c| + |c - x_{2k + 1}| < 2\epsilon\]
+            Basta tomar un $k_0 = \max(k_{2k}, k_{2k+1})$ para garantizar $|x_n - x_m| < \epsilon$.\par
+            En general dado $A = \bigcup\limits_{i}^n A_i$, $(x_a)_{a\in A}$ converge a $c \iff$ $(x_a)_{a\in A_i}$ convergen a $c$.
+        \item Las subsecuencias convergentes de una secuencia convergente comparten limite. Como $(x_{3k}) \cap (x_{2k})$ es una subsecuencia de $(x_{2k})$ y $(x_{3k})$ que converge a $c$, $(x_{2k})$ y $(x_{3k})$ tambi\'en lo hacen.\\
+            Usando un razonamiento analogo con $(x_{3k}) \cap (x_{2k+1})$ se deduce que $(x_{2k})$ y $(x_{2k + 1})$ convergen a $c$. Se reduce a (a).
+    }
+\end{solucion}
 \setcounter{section}{3}
 \section{Practica 4}
-\setcounter{ejercicio}{6}
-\begin{ejercicio}
+\beginc{ejercicio}{7}
     \enum{
         \item $\{(x, y) \in \mathbb{R}^2 : x^2 + y\sin(e^x-1)=-2\}$ es cerrado.
         \item $\{(x, y, z) \in \mathbb{R}^3 : -1 \leq x^3 -3y^4 + z - 2 \leq 3\}$ es cerrado.
         \item $\{(x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 : 3 < x_1 - x_2\}$ es abierto.
     }
 \end{ejercicio}
+\begin{solucion}
+    \enum{
+        \item $A$ es cerrado $\iff A^c$ es abierto.\\
+        Construyo una $\{x_n, y_n\} \subset A^c / \{x_n, y_n\} \rightarrow A$.
+        
+    }
+\end{solucion}
 
 \chapter{Segundo Parcial}
 \section{Glosario}
