@@ -7,6 +7,18 @@
 
 \chapter{Primer Parcial}
 \section{Practica 1}
+\begin{teorema}[Heine-Borel]
+        Un conjunto $K \subseteq \mathbb{R}$ es \textit{compacto} si:
+        \enum{
+            \item Es cerrado y acotado.
+            \item Toda secuencia en $K$ tiene una subsecuencia que converge en $K$.
+            \item Todo cubrimiento abierto de $K$ tiene un subcubrimiento finito.
+        }    
+\end{teorema}
+\begin{definicion}[Perfecto]
+    Un conjunto $P \subseteq \mathbb{R}$ es \textit{perfecto} si es cerrado y no contiene puntos aislados.
+    (Todo $x \in P$ es un punto limite).
+\end{definicion}
 \beginc{ejercicio}{16}
     \enum{
         \item Si $\lim\limits_{k\to\infty} x_{2k} = \lim\limits_{k\to\infty}  x_{2k+1}$ entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
@@ -41,7 +53,15 @@
 \end{solucion}
 
 \chapter{Segundo Parcial}
-\section{Glosario}
-\section{Ejercicios}
+\chapter{Otros}
+\section{Explicario}
+\begin{teorema}[Bolas de Brouwer]
+    Dado un conjunto $K$ y una funcion $f$ satisfaciendo las condiciones del teorema del punto fijo de Brouwer,
+    es corolario el teorema de las \textit{bolas peludas}:
+    \enum{
+        \item Construyo un espacio vectorial \textit{(posible per Brouwer)}.
+        \item Como hay un punto $x \in K: x = f(x)$, 
+    }
+\end{teorema}
 
 \end{document}
