@@ -1,5 +1,9 @@
 \documentclass{book}
-\include{preamble.tex}
+\input{preamble.tex}
+
+\title{An\'alisis Avanzado}
+\author{Guido Freire}
+\date{2C 2022}
 
 \begin{document}
 
@@ -19,23 +23,36 @@
     Un conjunto $P \subseteq \mathbb{R}$ es \textit{perfecto} si es cerrado y no contiene puntos aislados.
     (Todo $x \in P$ es un punto limite).
 \end{definicion}
-\beginc{ejercicio}{16}
+\beginc{ejercicio}{15}
     \enum{
-        \item Si $\lim\limits_{k\to\infty} x_{2k} = \lim\limits_{k\to\infty}  x_{2k+1}$ entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
-        \item Si $(x_{2k})_{k\in\mathbb{N}}$, $(x_{2k+1})_{k\in\mathbb{N}}$ y $(x_{3k})_{k\in\mathbb{N}}$ son convergentes entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
+        \item Si $\lim\limits_{k\to\infty} x_{2k} = \lim\limits_{k\to\infty}  x_{2k-1}$ entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
+        \item Si $(x_{2k})_{k\in\mathbb{N}}$, $(x_{2k-1})_{k\in\mathbb{N}}$ y $(x_{3k})_{k\in\mathbb{N}}$ son convergentes entonces $(x_n)_{n\in\mathbb{N}}$ es convergente.
     }
 \end{ejercicio}
 \begin{solucion}
     \enum{
-        \item Existen $k_{2k}$, $k_{2k+1}$ que garantizan $\forall \epsilon > 0$ que $|x_{2k} - c| < \epsilon$, $|x_{2k+1} - c| < \epsilon$
-            \[ |x_{2k} + x_{2k+1}| \leq |x_{2k} + c| + |c - x_{2k + 1}| < 2\epsilon\]
-            Basta tomar un $k_0 = \max(k_{2k}, k_{2k+1})$ para garantizar $|x_n - x_m| < \epsilon$.\par
+        \item Existen $k_{2k}$, $k_{2k-1}$ que garantizan $\forall \epsilon > 0$ que $|x_{2k} - c| < \epsilon$, $|x_{2k-1} - c| < \epsilon$
+            \[ |x_{2k} + x_{2k-1}| \leq |x_{2k} + c| + |c - x_{2k + 1}| < 2\epsilon\]
+            Basta tomar un $k_0 = \max(k_{2k}, k_{2k-1})$ para garantizar $|x_n - x_m| < \epsilon$.\par
             En general dado $A = \bigcup\limits_{i}^n A_i$, $(x_a)_{a\in A}$ converge a $c \iff$ $(x_a)_{a\in A_i}$ convergen a $c$.
         \item Las subsecuencias convergentes de una secuencia convergente comparten limite. Como $(x_{3k}) \cap (x_{2k})$ es una subsecuencia de $(x_{2k})$ y $(x_{3k})$ que converge a $c$, $(x_{2k})$ y $(x_{3k})$ tambi\'en lo hacen.\\
-            Usando un razonamiento analogo con $(x_{3k}) \cap (x_{2k+1})$ se deduce que $(x_{2k})$ y $(x_{2k + 1})$ convergen a $c$. Se reduce a (a).
+            Usando un razonamiento analogo con $(x_{3k}) \cap (x_{2k-1})$ se deduce que $(x_{2k})$ y $(x_{2k + 1})$ convergen a $c$. Se reduce a (a).
     }
 \end{solucion}
-\setcounter{section}{3}
+\setcounter{section}{2}
+\section{Practica 3}
+\begin{definicion}[Punto interior]
+    Dado $A \subseteq X$, $x \in A$ se dice \textit{punto interior} $\iff \exists B_r(x) \subset A$
+\end{definicion}
+\begin{definicion}[Punto aislado]
+    Dado $A \subseteq X$, $x \in A$ se dice \textit{punto aislado} $\iff \exists B_r(x) \cap A = \{x\}$
+\end{definicion}
+\begin{definicion}[Punto de adherencia]
+    Dado $A \subseteq X$, $x \in X$ se dice \textit{punto de adherencia} $\iff \forall B_r(x) \cap A \neq \emptyset$
+\end{definicion}
+\begin{definicion}[Punto de acumulaci\'on]
+    Dado $A \subseteq X$, $x \in X$ se dice \textit{punto de acumulacion} $\iff \forall B_r(x)-\{x\} \cap A \neq \emptyset$
+\end{definicion}
 \section{Practica 4}
 \beginc{ejercicio}{7}
     \enum{
@@ -54,7 +71,7 @@
 
 \chapter{Segundo Parcial}
 \chapter{Otros}
-\section{Explicario}
+\section{Digresionario}
 \begin{teorema}[Bolas de Brouwer]
     Dado un conjunto $K$ y una funcion $f$ satisfaciendo las condiciones del teorema del punto fijo de Brouwer,
     es corolario el teorema de las \textit{bolas peludas}:
