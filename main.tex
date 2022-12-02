@@ -80,10 +80,16 @@
     Sea $(f_n)_{n\in\mathbb{N}} \in L^1$ de Cauchy. Tomar $\epsilon_k = \frac{1}{2^k} \Rightarrow \exists N_0 \cdots N_k \,/\, || f_{n_{k+1}} - f_{n_k} || < \epsilon_k$
     \begin{align*}
         f &= f_{n_1} + \sum_{k=1}^{\infty}(f_{n_{k+1}} - f_{n_k}) \leq |f|\\
-        \int |f| &\leq \int |f_{n_1}| + \int \sum_{k=1}^{\infty}|f_{n_{k+1}} - f_{n_k}| \quad\text{(mayorada)}\\
+        \int |f| &\leq \int |f_{n_1}| + \int \sum_{k=1}^{\infty}|f_{n_{k+1}} - f_{n_k}| \quad\text{(mon\'otona)}\\
                  &= \int |f_{n_1}| + \sum_{k=1}^{\infty} ||f_{n_{k+1}} - f_{n_k}|| \leq \int |f_{n_1}| + \sum_{k=1}^{\infty} \frac{1}{2^k}
     \end{align*}
-    En particular, la serie converge. Notar que las sumas parciales son los t\'erminos de $f_{n_k}$, asi que $f_{n_k} \rightarrow f$. Con esta demostraci\'on tambi\'en queda claro que $f \in L^1$.
+    As\'i que $f \in L^1$. Queda confirmar $f_{n_k} \to f$. Una forma es notando:
+        $$|f - f_{n_K}| \leq \sum_{k=K}^{\infty}|f_{n_{k+1}} - f_{n_k}| \to 0$$
+    Que integrando y usando convergencia mon\'otona concluye que converge en $L^1$. Una m\'as en l\'inea con lo que viene es:
+    \begin{align*}
+        |f - f_{n_K}| &\leq ||f| + |f_{n_K}|| \leq 2|f| \quad \text{(mayorada)}\\
+        \lim_{K\to\infty}\int|f - f_{n_K}|\, d\mu &= \int\lim_{K\to\infty}|f - f_{n_K}|\, d\mu = 0
+    \end{align*}
 \end{teorema}
 \begin{teorema}[$L^2$ tiene un producto interno]
     \enum{
