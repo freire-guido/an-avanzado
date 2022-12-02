@@ -10,6 +10,7 @@
 \maketitle
 
 \chapter{Primer Parcial}
+
 \section{Practica 1}
 \begin{teorema}[Heine-Borel]
         Un conjunto $K \subseteq \mathbb{R}$ es \textit{compacto} si:
@@ -70,6 +71,29 @@
 \end{solucion}
 
 \chapter{Segundo Parcial}
+
+
+
+\chapter{Final}
+
+\begin{teorema}[$L^1$ es completo]
+    Sea $(f_n)_{n\in\mathbb{N}} \in L^1$ de Cauchy. Tomar $\epsilon_k = \frac{1}{2^k} \Rightarrow \exists N_0 \cdots N_k \,/\, || f_{n_{k+1}} - f_{n_k} || < \epsilon_k$
+    \begin{align*}
+        f &= f_{n_1} + \sum_{k=1}^{\infty}(f_{n_{k+1}} - f_{n_k}) \leq |f|\\
+        \int |f| &\leq \int |f_{n_1}| + \int \sum_{k=1}^{\infty}|f_{n_{k+1}} - f_{n_k}| \quad\text{(mayorada)}\\
+                 &= \int |f_{n_1}| + \sum_{k=1}^{\infty} ||f_{n_{k+1}} - f_{n_k}|| \leq \int |f_{n_1}| + \sum_{k=1}^{\infty} \frac{1}{2^k}
+    \end{align*}
+    En particular, la serie converge. Notar que las sumas parciales son los t\'erminos de $f_{n_k}$, asi que $f_{n_k} \rightarrow f$. Con esta demostraci\'on tambi\'en queda claro que $f \in L^1$.
+\end{teorema}
+\begin{teorema}[$L^2$ tiene un producto interno]
+    \enum{
+    \item Cauchy-Schwarz: Asumir $||f'||, ||g'|| \neq 0$, tomar $f' = f/||f||$ y $g' = g/||g||$
+          $$||f||\,||g||\int f'\bar{g'}\,d\mu \leq ||f||\,||g|| \cdot 1$$
+    \item Desigualdad Triangular
+          $$||f + g||^2 = (f + g,\, f + g) \leq ||f||^2 + 2||f||\,||g|| + ||g||^2 \leq (||f|| + ||g||)^2$$
+    }
+\end{teorema}
+
 \chapter{Otros}
 \section{Digresionario}
 \begin{teorema}[Bolas de Brouwer]
