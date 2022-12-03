@@ -94,7 +94,11 @@
 \begin{teorema}[$L^2$ tiene un producto interno]
     \enum{
     \item Cauchy-Schwarz: Asumir $||f'||, ||g'|| \neq 0$, tomar $f' = f/||f||$ y $g' = g/||g||$
-        $$||f||\,||g||\int f'\bar{g'}\,d\mu \leq ||f||\,||g|| \cdot 1$$
+        \begin{align*}
+            0 &\leq |f|^2 - 2|fg| + |g|^2 = (|f|-|g|)^2\\
+            2fg &\leq |f|^2 + |g|^2\\
+            2\int fg &\leq ||f||^2 + ||g||^2
+        \end{align*}
     \item Desigualdad Triangular
         $$||f + g||^2 = (f + g,\, f + g) \leq ||f||^2 + 2||f||\,||g|| + ||g||^2 \leq (||f|| + ||g||)^2$$
     \item Pit\'agoras
