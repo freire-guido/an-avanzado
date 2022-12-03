@@ -87,7 +87,7 @@
         $$|f - f_{n_K}| \leq \sum_{k=K}^{\infty}|f_{n_{k+1}} - f_{n_k}| \to 0$$
     Que integrando y usando convergencia mon\'otona concluye que converge en $L^1$. Una m\'as en l\'inea con lo que viene es:
     \begin{align*}
-        |f - f_{n_K}| &\leq ||f| + |f_{n_K}|| \leq 2|f| \quad \text{(mayorada)}\\
+        |f - f_{n_K}| &\leq |f| + |f_{n_K}| \leq 2|f| \quad \text{(mayorada)}\\
         \lim_{K\to\infty}\int|f - f_{n_K}|\, d\mu &= \int\lim_{K\to\infty}|f - f_{n_K}|\, d\mu = 0
     \end{align*}
 \end{teorema}
@@ -104,6 +104,14 @@
     \item Pit\'agoras
         $$||f + g||^2 = ||f||^2 + ||g||^2 \quad (f \perp g)$$
     }
+\end{teorema}
+\begin{teorema}[Gram-Schmidt]
+    Dada una base $\{u_k\}$ contable, existe una base ortonormal contable. Suponer que $\{e_i\}_{i>K}$ son ortonormales:
+    \begin{align*}
+        e_K &\leftarrow u_k - \text{proy}_{e_{K-1}}(u_k)\\
+            &= u_k - \langle e_{K-1}, u_k \rangle e_{K-1}\\
+        e_K &\leftarrow \frac{e_K}{||e_K||}
+    \end{align*}
 \end{teorema}
 \begin{teorema}[$B(X)$ es denso en $L^2(X)$]
     Dada $f \in L^2(X)$, tomar la funci\'on acotada
