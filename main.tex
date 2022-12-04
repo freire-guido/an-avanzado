@@ -106,7 +106,7 @@
     }
 \end{teorema}
 \begin{teorema}[Gram-Schmidt]
-    Dada una base $\{u_k\}$ contable, existe una base ortonormal contable. Suponer que $\{e_i\}_{i>K}$ son ortonormales:
+    Dada una base $\{u_k\}$ contable, existe una base ortonormal contable. Suponer que $\{e_i\}_{i<K}$ son ortonormales:
     \begin{align*}
         e_K &\leftarrow u_k - \text{proy}_{e_{K-1}}(u_k)\\
             &= u_k - \langle e_{K-1}, u_k \rangle e_{K-1}\\
@@ -134,9 +134,8 @@
     Entonces su hiperplano no es m\'as que el complemento ortogonal de $T$.
     \enum{
         \item Unicidad: Sean $t, t' /\; \forall x \in X,\, \langle t - t', x \rangle = 0 \implies \langle t - t', t - t' \rangle = 0$
-        \item Existencia \textit{(caso separable)}: Dada $\{e_i\}_{i\in I}$ base ortonormal, $u \in X$
+        \item Existencia \textit{(caso separable)}: Dada $\{e_i\}_{i\in I}$ base ortonormal, $\forall u \in X,\, u = \sum_{i\in I}a_ie_i$
         \begin{align*}
-            u &= \sum_{i\in I}a_ie_i\\
             T(u) &= T(\sum_{i\in I}\langle u, e_i \rangle e_i)\\
                  &= \sum_{i\in I}\langle u, e_i \rangle T(e_i)\\
                  &= \langle u, \sum_{i\in I}T(e_i)e_i \rangle 
