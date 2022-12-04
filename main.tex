@@ -126,6 +126,24 @@
     \lim_{n\to\infty}||f - f_n|| = \lim_{n\to\infty} \int_X |f(x) - f_n(x)|^2\,dx = 0
     $$
 \end{teorema}
+\begin{teorema}[Representaci\'on de Riesz]
+    Vimos que un hiperplano $H$ es el n\'ucleo de un $T: X \to \mathbb{R}$ continuo
+    $$H = T^{-1}(\{0\}) \implies H\text{ tambi\'en de Hilbert}$$
+    El teorema de representaci\'on de Riesz dice que si $X$ es de Hilbert:
+    $$\forall T: X \to \mathbb{R},\; \exists ! t \in X /\; T(x) = \langle t, x \rangle$$
+    Entonces su hiperplano no es m\'as que el complemento ortogonal de $T$.
+    \enum{
+        \item Unicidad: Sean $t, t' /\; \forall x \in X,\, \langle t - t', x \rangle = 0 \implies \langle t - t', t - t' \rangle = 0$
+        \item Existencia \textit{(caso separable)}: Dada $\{e_i\}_{i\in I}$ base ortonormal, $u \in X$
+        \begin{align*}
+            u &= \sum_{i\in I}a_ie_i\\
+            T(u) &= T(\sum_{i\in I}\langle u, e_i \rangle e_i)\\
+                 &= \sum_{i\in I}\langle u, e_i \rangle T(e_i)\\
+                 &= \langle u, \sum_{i\in I}T(e_i)e_i \rangle 
+        \end{align*}
+        Osea que puedo tomar $t = \sum_{i\in I}T(e_i)e_i$
+    }
+\end{teorema}
 
 \chapter{Otros}
 \section{Digresionario}
